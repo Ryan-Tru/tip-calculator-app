@@ -7,7 +7,6 @@
     --grayish-cyan: hsl(184, 14%, 56%);
     --light-grayish-cyan: hsl(185, 41%, 84%);
     --very-light-grayish-cyan: hsl(189, 41%, 97%);
-    --white: hsl(0, 0%, 100%);
 }
 
 * {
@@ -55,6 +54,8 @@
     gap: 5%;
 }
 
+/* Styling the input */
+
 #bill-amt {
     width: 100%;
     border: none;
@@ -62,21 +63,98 @@
     background-color: var(--very-light-grayish-cyan);
     text-align: right;
     color: var(--very-dark-cyan);
-    padding-right: 10px;
+    padding-right: 1rem;
 }
 
-.dollar-icon {
+.icon {
     position: absolute;
     width: 1rem;
     margin-left: 10px;
     margin-top: 10px;
 }
 
+.people-icon {
+    margin-top: 12px;
+}
+
+#people-amt {
+    width: 100%;
+    border: none;
+    font-size: 2rem;
+    background-color: var(--very-light-grayish-cyan);
+    text-align: right;
+    color: var(--very-dark-cyan);
+    padding-right: 1rem;
+}
+
+/* Styling Tip container */
+
 .tip-amt-selector-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
 .tip-selector-title {
     grid-column: 1 / 3;
+}
+
+.tip-percentage {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.percent-btn {
+    color: white;
+    background-color: var(--very-dark-cyan);
+}
+
+.custom {
+    color: var(--dark-grayish-cyan);
+}
+
+/* Styling Total Container */
+
+.total-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--very-dark-cyan);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    border-radius: 20px;
+    gap: 10px;
+}
+
+.tip-total-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-title {
+    color: white;
+    font-weight: 700;
+}
+
+.total-amt-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.person {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--grayish-cyan);
+}
+
+.reset-btn {
+    color: var(--very-dark-cyan);
+    background-color: var(--strong-cyan);
+    border: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 0.5rem 0;
 }
