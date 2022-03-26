@@ -54,3 +54,29 @@
     flex-direction: column;
     gap: 5%;
 }
+
+#bill-amt {
+    width: 100%;
+    border: none;
+    font-size: 2rem;
+    background-color: var(--very-light-grayish-cyan);
+    text-align: right;
+    color: var(--very-dark-cyan);
+    padding-right: 10px;
+}
+
+.dollar-icon {
+    position: absolute;
+    width: 1rem;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.tip-amt-selector-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.tip-selector-title {
+    grid-column: 1 / 3;
+}

@@ -13,15 +13,17 @@
   <div class="parent-div">
     <div class="splitter-logo-container">
       <div class="splitter-logo">
-        <p class="splitter-top-half splitter">SPLI</p>
-        <p class="splitter-bottom-half splitter">TTER</p>
+        <img src="images/logo.svg" alt="Splitter logo" aria-hidden="true">
       </div>
     </div>
 
     <main class="tip-app-container">
       <div class="bill-container">
         <p class="bill-title">Bill</p>
-        <input type="text" name="bill-amt" id="bill-amt">
+        <div class="bill-input-container">
+          <img class="dollar-icon" src="images/icon-dollar.svg" alt="Dollar Icon" aria-hidden="true">
+          <input type="number" name="bill-amt" id="bill-amt">
+        </div>
       </div>
       <div class="tip-amt-selector-container">
         <p class="tip-selector-title">Select Tip %</p>
@@ -34,7 +36,10 @@
       </div>
       <div class="people-container">
         <p class="people-title">Number of People</p>
-        <input type="text" name="people-amt" id="people-amt">
+        <div class="people-input-container">
+          <img src="images/icon-person.svg" alt="Person Icon" aria-hidden="true">
+          <input type="text" name="people-amt" id="people-amt">
+        </div>
       </div>
 
       <div class="total-container">
