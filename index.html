@@ -5,19 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="app.js" defer></script>
   
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
 <body>
   <!-- Start Parent Div -->
   <div class="parent-div">
+    <!-- Start Logo -->
     <div class="splitter-logo-container">
       <div class="splitter-logo">
         <img src="images/logo.svg" alt="Splitter logo" aria-hidden="true">
       </div>
     </div>
+    <!-- End Logo -->
 
+    <!-- Start Tip App -->
     <main class="tip-app-container">
+      <!-- Start Bill Container -->
       <div class="bill-container">
         <p class="title">Bill</p>
         <div class="bill-input-container">
@@ -25,6 +30,9 @@
           <input class="inputs" type="number" name="bill-amt" id="bill-amt">
         </div>
       </div>
+      <!-- End Bill Container -->
+
+      <!-- Start Tip Amount Selection -->
       <div class="tip-amt-selector-container">
         <p class="tip-selector-title title">Select Tip %</p>
         <button class="tip-percentage percent-btn">5%</button>
@@ -34,6 +42,9 @@
         <button class="tip-percentage percent-btn">50%</button>
         <input type="number" class="custom" placeholder="Custom">
       </div>
+      <!-- End Tip Amount Selection -->
+
+      <!-- Start People Container -->
       <div class="people-container">
         <p class="title">Number of People</p>
         <div class="people-input-container">
@@ -41,9 +52,11 @@
           <input class="inputs" type="number" name="people-amt" id="people-amt">
         </div>
       </div>
+      <!-- End People Container -->
 
+      <!-- Start Total -->
       <div class="total-container">
-
+        <!-- Start Tip Total -->
         <div class="tip-total-container">
           <div>
             <div class="total-title">Tip Amount</div>
@@ -53,7 +66,9 @@
             $0.00
           </div>
         </div>
+        <!-- End Tip Total -->
 
+        <!-- Start Total Amount -->
         <div class="total-amt-container">
           <div>
             <div class="total-title">Total</div>
@@ -63,10 +78,14 @@
             $0.00
           </div>
         </div>
+        <!-- End Total Amount -->
 
+        <!-- Reset Button -->
         <button class="reset-btn">RESET</button>
       </div>
+      <!-- End Total -->
     </main>
+    <!-- End Tip App -->
   </div>
   <!-- End Parent Div -->
 </body>
