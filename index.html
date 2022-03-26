@@ -19,26 +19,26 @@
 
     <main class="tip-app-container">
       <div class="bill-container">
-        <p class="bill-title">Bill</p>
+        <p class="title">Bill</p>
         <div class="bill-input-container">
           <img class="icon" src="images/icon-dollar.svg" alt="Dollar Icon" aria-hidden="true">
-          <input type="number" name="bill-amt" id="bill-amt">
+          <input class="inputs" type="number" name="bill-amt" id="bill-amt">
         </div>
       </div>
       <div class="tip-amt-selector-container">
-        <p class="tip-selector-title">Select Tip %</p>
+        <p class="tip-selector-title title">Select Tip %</p>
         <button class="tip-percentage percent-btn">5%</button>
         <button class="tip-percentage percent-btn">10%</button>
         <button class="tip-percentage percent-btn">15%</button>
         <button class="tip-percentage percent-btn">25%</button>
         <button class="tip-percentage percent-btn">50%</button>
-        <button class="tip-percentage custom">Custom</button>
+        <input type="number" class="custom" placeholder="Custom">
       </div>
       <div class="people-container">
-        <p class="people-title">Number of People</p>
+        <p class="title">Number of People</p>
         <div class="people-input-container">
           <img class="icon people-icon" src="images/icon-person.svg" alt="Person Icon" aria-hidden="true">
-          <input type="number" name="people-amt" id="people-amt">
+          <input class="inputs" type="number" name="people-amt" id="people-amt">
         </div>
       </div>
 
@@ -49,8 +49,8 @@
             <div class="total-title">Tip Amount</div>
             <div class="person">/ person</div>
           </div>
-          <div class="tip-total">
-            123123
+          <div class="tip-total total">
+            $0.00
           </div>
         </div>
 
@@ -59,8 +59,8 @@
             <div class="total-title">Total</div>
             <div class="person">/ person</div>
           </div>
-          <div class="total-amt">
-            123123
+          <div class="total-amt total">
+            $0.00
           </div>
         </div>
 
