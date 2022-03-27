@@ -169,10 +169,6 @@
     border-radius: 5px;
 }
 
-.reset-btn-active {
-    background-color: var(--strong-cyan);
-}
-
 .total {
     font-size: 1.5rem;
     font-weight: 700;
