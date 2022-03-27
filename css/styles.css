@@ -62,6 +62,10 @@
     border-radius: 5px;
 }
 
+::placeholder {
+    color: var(--grayish-cyan);
+}
+
 .icon {
     position: absolute;
     width: 0.75rem;
@@ -119,10 +123,6 @@
     border: none;
     text-align: right;
     outline: none;
-}
-
-.custom::placeholder {
-    color: var(--dark-grayish-cyan);
 }
 
 /* Styling Total Container */
