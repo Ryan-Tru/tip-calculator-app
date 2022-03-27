@@ -98,7 +98,7 @@
 .percent-btn {
     color: white;
     background-color: var(--very-dark-cyan);
-    transition: all 0.2s ease;
+    transition: all 0.2s ease-in-out;
     font-size: 1rem;
     font-weight: 700;
     padding: 0.5rem;
@@ -167,6 +167,7 @@
     font-weight: 700;
     padding: 0.5rem 0;
     border-radius: 5px;
+    transition: all 0.2s ease-in-out;
 }
 
 .total {
