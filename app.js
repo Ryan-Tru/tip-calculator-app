@@ -11,7 +11,9 @@ const peopleAmt = document.querySelector('#people-amt');
 const tipTotal = document.querySelector('.tip-total');
 const totalAmt = document.querySelector('.total-amt');
 
-let tipPercent = 0;
+let tipPercent;
+let bill;
+let people;
 
 //Changes button color when selected, using if else statement to remove and add class
 tipPercentageBtn.forEach(button => {
@@ -69,10 +71,16 @@ customTip.addEventListener('click', () => {
     fiftyPercent.classList.remove('percent-btn-selected');
 });
 
-customTip.addEventListener('input', () => {
-    tipPercent = customTip.value;
-    console.log(tipPercent)
-});
+//Gets percentage
+customTip.addEventListener('input', () => tipPercent = customTip.value / 100);
+
+//Gets bill amount
+billAmt.addEventListener('input', () => bill = billAmt.value);
+
+//Gets people amount
+peopleAmt.addEventListener('input', () => people = peopleAmt.value);
+
+
 
 
 
