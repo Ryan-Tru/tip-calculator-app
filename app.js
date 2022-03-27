@@ -137,6 +137,8 @@ resetButton.addEventListener('click', () => {
 
         tipTotalText.innerHTML = `\$0.00`;
         totalAmtText.innerHTML = `\$0.00`;
+
+        resetButton.style.backgroundColor = 'rgb(15, 104, 109)';
     }
 });
 
