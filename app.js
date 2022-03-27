@@ -15,6 +15,7 @@ const resetButton = document.querySelector('.reset-btn');
 let tipPercent = 0;
 let bill = 0;
 let people = 0;
+let canReset = false;
 
 //Changes button color when selected, using if else statement to remove and add class
 tipPercentageBtn.forEach(button => {
@@ -109,10 +110,35 @@ function appendTotals() {
 function reset() {
     if(tipPercent > 0 || people > 0 || bill > 0) {
         resetButton.style.backgroundColor = 'var(--strong-cyan)';
+        canReset = true;
     } else {
         resetButton.style.backgroundColor = 'rgb(15, 104, 109)';
+        canReset = false;
     }
 }
+
+resetButton.addEventListener('click', () => {
+    if(canReset === true) {
+        tipPercent = 0;
+        customTip.value = '';
+
+        bill = 0;
+        billAmt.value = '';
+
+        people = 0;
+        peopleAmt.value = '';
+
+
+        fivePercent.classList.remove('percent-btn-selected');
+        tenPercent.classList.remove('percent-btn-selected');
+        fifteenPercent.classList.remove('percent-btn-selected');
+        twentyfivePercent.classList.remove('percent-btn-selected');
+        fiftyPercent.classList.remove('percent-btn-selected');
+
+        tipTotalText.innerHTML = `\$0.00`;
+        totalAmtText.innerHTML = `\$0.00`;
+    }
+});
 
 
 
