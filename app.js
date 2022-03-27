@@ -11,36 +11,52 @@ const peopleAmt = document.querySelector('#people-amt');
 const tipTotal = document.querySelector('.tip-total');
 const totalAmt = document.querySelector('.total-amt');
 
+let tipPercent = 0;
+
 //Changes button color when selected, using if else statement to remove and add class
 tipPercentageBtn.forEach(button => {
     button.addEventListener('click', () => {
         button.classList.add('percent-btn-selected');
+
         if(button.classList.contains('five-percent')) {
             tenPercent.classList.remove('percent-btn-selected');
             fifteenPercent.classList.remove('percent-btn-selected');
             twentyfivePercent.classList.remove('percent-btn-selected');
             fiftyPercent.classList.remove('percent-btn-selected');
+
+            tipPercent = fivePercent.getAttribute('data-tip');
+
         } else if(button.classList.contains('ten-percent')) {
             fivePercent.classList.remove('percent-btn-selected');
             fifteenPercent.classList.remove('percent-btn-selected');
             twentyfivePercent.classList.remove('percent-btn-selected');
             fiftyPercent.classList.remove('percent-btn-selected');
+
+            tipPercent = tenPercent.getAttribute('data-tip');
         } else if(button.classList.contains('fifteen-percent')) {
             fivePercent.classList.remove('percent-btn-selected');
             tenPercent.classList.remove('percent-btn-selected');
             twentyfivePercent.classList.remove('percent-btn-selected');
             fiftyPercent.classList.remove('percent-btn-selected');
+
+            tipPercent = fifteenPercent.getAttribute('data-tip');
         } else if(button.classList.contains('twentyfive-percent')) {
             fivePercent.classList.remove('percent-btn-selected');
             tenPercent.classList.remove('percent-btn-selected');
             fifteenPercent.classList.remove('percent-btn-selected');
             fiftyPercent.classList.remove('percent-btn-selected');
+
+            tipPercent = twentyfivePercent.getAttribute('data-tip');
         } else if(button.classList.contains('fifty-percent')) {
             fivePercent.classList.remove('percent-btn-selected');
             tenPercent.classList.remove('percent-btn-selected');
             fifteenPercent.classList.remove('percent-btn-selected');
             twentyfivePercent.classList.remove('percent-btn-selected');
+
+            tipPercent = fiftyPercent.getAttribute('data-tip');
         }
+
+        console.log(tipPercent);
     });
 });
 
@@ -52,3 +68,11 @@ customTip.addEventListener('click', () => {
     twentyfivePercent.classList.remove('percent-btn-selected');
     fiftyPercent.classList.remove('percent-btn-selected');
 });
+
+customTip.addEventListener('input', () => {
+    tipPercent = customTip.value;
+    console.log(tipPercent)
+});
+
+
+
