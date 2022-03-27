@@ -10,6 +10,7 @@ const customTip = document.querySelector('.custom');
 const peopleAmt = document.querySelector('#people-amt');
 const tipTotalText = document.querySelector('.tip-total');
 const totalAmtText = document.querySelector('.total-amt');
+const resetButton = document.querySelector('.reset-btn');
 
 let tipPercent = 0;
 let bill = 0;
@@ -57,6 +58,7 @@ tipPercentageBtn.forEach(button => {
             tipPercent = parseFloat(fiftyPercent.getAttribute('data-tip'));
         }
         appendTotals();
+        reset();
     });
 });
 
@@ -73,12 +75,14 @@ customTip.addEventListener('click', () => {
 customTip.addEventListener('input', () => {
     tipPercent = parseFloat(customTip.value / 100);
     appendTotals();
+    reset();
 });
 
 //Gets bill amount
 billAmt.addEventListener('input', () => {
     bill = parseFloat(billAmt.value);
     appendTotals();
+    reset();
 });
 
 
@@ -86,8 +90,10 @@ billAmt.addEventListener('input', () => {
 peopleAmt.addEventListener('input', () => {
     people = parseFloat(peopleAmt.value);
     appendTotals();
+    reset();
 });
 
+//Appends totals
 function appendTotals() {  
     let tipTotal = bill * tipPercent / people;
     let total = bill / people;
@@ -97,6 +103,14 @@ function appendTotals() {
     } else {
         tipTotalText.innerHTML = `\$0.00`;
         totalAmtText.innerHTML = `\$0.00`;
+    }
+}
+
+function reset() {
+    if(tipPercent > 0 || people > 0 || bill > 0) {
+        resetButton.style.backgroundColor = 'var(--strong-cyan)';
+    } else {
+        resetButton.style.backgroundColor = 'rgb(15, 104, 109)';
     }
 }
 
