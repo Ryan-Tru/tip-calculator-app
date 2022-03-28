@@ -211,12 +211,12 @@ input[type=number] {
     }
 
     .input-container {
-        width: 40%;
-        gap: 30px;
+        width: 50%;
+        justify-content: space-between;
     }
 
     .total-container {  
-        width: 60%;
+        width: 50%;
     }
 
     input:focus {
@@ -233,6 +233,14 @@ input[type=number] {
     }
 
     .reset-btn {
-        margin-top: 90px;
+        margin-top: 40px;
+    }
+
+    .tip-amt-selector-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .tip-selector-title {
+        grid-column: 1 / 4;
     }
 }
