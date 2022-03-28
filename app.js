@@ -98,7 +98,7 @@ peopleAmt.addEventListener('input', () => {
 function appendTotals() {  
     let tipTotal = bill * tipPercent / people;
     let total = bill / people;
-    if(people >= 1) {
+    if(people >= 1 && bill >= 1) {
         tipTotalText.innerHTML = `\$${tipTotal.toFixed(2)}`;
         totalAmtText.innerHTML = `\$${total.toFixed(2)}`;
     } else {
