@@ -16,6 +16,16 @@
     font-family: 'Space Mono', monospace;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .parent-div {
     background-color: var(--light-grayish-cyan);
     height: 100vh;
@@ -32,6 +42,12 @@
     justify-content: center;
     align-items: center;
     height: 12%;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 /* Styling Tip App */
@@ -174,4 +190,49 @@
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--strong-cyan);
+}
+
+@media only screen and (min-width: 760px) {
+    .parent-div {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .splitter-logo-container {
+        margin-bottom: 70px;
+    }
+
+    .tip-app-container {
+        height: auto;
+        flex-direction: row;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 20px;
+        width: 50%;
+    }
+
+    .input-container {
+        width: 40%;
+        gap: 30px;
+    }
+
+    .total-container {  
+        width: 60%;
+    }
+
+    input:focus {
+        outline-color: var(--strong-cyan);
+    }
+
+    .custom:focus {
+        outline-style: solid;
+        outline-color: var(--strong-cyan);
+    }
+
+    .total {
+        font-size: 3rem;
+    }
+
+    .reset-btn {
+        margin-top: 90px;
+    }
 }
